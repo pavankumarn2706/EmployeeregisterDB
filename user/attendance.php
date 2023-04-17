@@ -128,7 +128,7 @@ session_start();?>
 		function toggleTimeInputs() {
 			const status = document.getElementById('status').value;
 			const timeInputs = document.getElementById('timeInputs');
-			if (status === 'fullday' || status==='halfday') {
+			if (status === 'fullday' || status === 'halfday') {
 				timeInputs.style.display = 'block';
 			} else {
 				timeInputs.style.display = 'none';

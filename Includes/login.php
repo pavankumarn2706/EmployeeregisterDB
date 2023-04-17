@@ -1,7 +1,10 @@
 <?php ob_start();
 session_start();
 include "./db.php";
-if(isset($_POST['login'])){
+// if(isset($_POST['login'])){
+    function Checklogin(){
+        global $connection;
+
     $username=$_POST['username'];
     $password=$_POST['password'];
     if($username && $password){
@@ -39,10 +42,9 @@ if(isset($_POST['login'])){
             $_SESSION['email']=$email;
             $_SESSION['address']=$address;
             $_SESSION['username']=$username;
-            header("Location:../user");
+            return "Login Successfully";
         }
-        else header("Location:../login.php");
+        else return "Invalid Password";
     }
-    else header("Location:../login.php");
 }
 ?>

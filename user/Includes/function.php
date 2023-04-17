@@ -58,5 +58,23 @@ function view($arr){
         </tr>
     </tbody>";
 }
-}    
+}  
+
+function array_a($array1,$array2){
+    $diff = array();
+
+foreach ($array1 as $a1) {
+    $found = false;
+    foreach ($array2 as $a2) {
+        if ($a1['id'] == $a2['id']) {
+            $found = true;
+            break;
+        }
+    }
+    if (!$found) {
+        $diff[] = $a1;
+    }
+}
+return $diff;
+}
 ?>

@@ -108,6 +108,7 @@ li a:hover:not(.active) {
   <li><a href="edit.php">Edit</a></li>
   <li><a href="attendance.php">Attendance</a></li>
   <li><a href="view.php">Attendance View</a></li>
+  <li><a href="details.php">Employee Details</a></li>
 </ul>
   <!-- /navigation bar -->
     <table>

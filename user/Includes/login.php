@@ -9,7 +9,7 @@ if(isset($_POST['login'])){
         $password=mysqli_real_escape_string($connection,$password);
         $query="SELECT * FROM Employee WHERE username='{$username}';";
         $result=mysqli_query($connection,$query);
-        while($row=mysqli_fetch_assoc($result)){
+        $row=mysqli_fetch_assoc($result);
             $employee_id=$row['employee_id'];
             $firstname=$row['firstname'];
             $middlename=$row['middlename'];
@@ -21,12 +21,11 @@ if(isset($_POST['login'])){
             $db_password=$row['password'];
             $address=$row['address'];
             $db_username=$row['username'];
-        }
-        echo $row['email'];
         $hashFormat="$2y$10$";
         $salt="iusesomestrings25";
         $hashFormat_and_salt= $hashFormat.$salt;
         $password=crypt($password,$hashFormat_and_salt);
+        
         if($password===$db_password){
 
             $_SESSION['employee_id']=$employee_id;
@@ -45,4 +44,5 @@ if(isset($_POST['login'])){
     }
     else header("Location:../login.php");
 }
+else header("Location:../index.php");
 ?>

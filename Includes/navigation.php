@@ -16,6 +16,9 @@
                     <li>
                         <a href="login.php">Login</a>
                     </li>
+                    <li>
+                    <a href="autocomplete.php">Search</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

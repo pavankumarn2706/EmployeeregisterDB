@@ -7,10 +7,10 @@
 <div class="well">
         <h4>Login</h4>
         <!-- form -->
-        <form action="Includes/login.php" method="post">
+        <form id="myForm1" action="Includes/login.php" method="post">
         <div class="input-group">
             <label for="username">Username</label>
-            <input type="text" name="username" class="form-control" placeholder="Enter username"><br>
+            <input type="text" name="username" id="username" class="form-control" placeholder="Enter username"><br>
             <label for="password">Password</label>
             <input type="password" name="password" id="myInput" class="form-control"placeholder='Enter password'><br><br>
             <input type="checkbox" onclick="myFunction()">Show Password
