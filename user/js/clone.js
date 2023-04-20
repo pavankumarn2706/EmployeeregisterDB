@@ -2,13 +2,12 @@ count = 1;
 $(document).on('click', '.btn-primary', function(e) {
     e.preventDefault();//prevent default of browser
     var parent = $(this).parent();
+    parent.find("button#remove").prop('disabled', false);
     var add = parent.clone();
     add.attr("id","edu"+count);
     // add.find("#delete").attr("id","delete"+row);
     add.find("input").val("");
     add.find("select").val("");
-    parent.find("button#remove").hide();
-    parent.append(`<button id = 'remove' class='btn btn-danger'>x</button>`);
     count++;
     $(".sub").append(add);
 });      
@@ -16,12 +15,11 @@ row = 1;
 $(document).on('click', '.btn-primary1', function(e) {
     e.preventDefault();//prevent default of browser
     var parent = $(this).parent();
+    parent.find("button#delete").prop('disabled', false);
     var add = parent.clone();
     add.attr("id","exp"+row);
     // add.find("#delete").attr("id","delete"+row);
     add.find("input").val("");
-    parent.find("button#delete").hide();
-    parent.append(`<button id = 'delete' class='btn btn-danger'>x</button>`);    
     row++;
     $(".sub1").append(add);
 });

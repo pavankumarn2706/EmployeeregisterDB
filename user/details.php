@@ -56,9 +56,9 @@ foreach($res as $key => $re){
     </div><br>
     <div class='input-group' id='4'>
         <label for='date'>From Date:</label>
-        <input class='fromDate' type='text' id='fromDate{$re['id']}' name='fromDate[]' value ='{$re["fromDate"]}'>
+        <input class='fromDate' type='text' id='fromDate{$re['id']}' name='fromDate[]' value ='{$re["fromDate"]}'autocomplete='off'>
         <label for='date'> To Date:</label>
-        <input class='toDate' type='text' id='toDate{$re['id']}' name='toDate[]' value ='{$re["toDate"]}'>
+        <input class='toDate' type='text' id='toDate{$re['id']}' name='toDate[]' value ='{$re["toDate"]}'autocomplete='off'>
         <input class='present' type='checkbox' name='present'>
         <b>Present</b>
     </div>
@@ -89,15 +89,15 @@ foreach($res as $key => $re){
     </div><br>
     <div class='input-group' id='4'>
         <label for='date'>From Date:</label>
-        <input class='fromDate' type='text'id='fromDate0' name='fromDate[]' value =''>
+        <input class='fromDate' type='text'id='fromDate0' name='fromDate[]' value =''autocomplete='off'>
         <label for='date'> To Date:</label>
-        <input class='toDate' type='text' id='toDate0' name='toDate[]' value =''>
+        <input class='toDate' type='text' id='toDate0' name='toDate[]' value =''autocomplete='off'>
         <input class='present' type='checkbox' name='present'>
         <b>Present</b>
     </div>
     <input type='text' name='id[]' id='id0' value='"0"' hidden>
     <button id = 'pluse' class='btn btn-primary'>+</button>
-    <!-- <button id = 'remove' class='btn btn-danger'>x</button> -->
+    <button id = 'remove' class='btn btn-danger' disabled>x</button>
 </div>
     <?php } ?>
 </div>
@@ -133,9 +133,9 @@ foreach($res as $key => $re){
         </div><br>
         <div class='input-group' id='4'>
             <label for='date'>From Date:</label>
-            <input class='fromDate' type='text' id='fromDate' name='fromDate[]' value='{$re1["fromDate"]}'>
+            <input class='fromDate' type='text' id='fromDate' name='fromDate[]' value='{$re1["fromDate"]}'autocomplete='off'>
             <label for='date'> To Date:</label>
-            <input class='toDate' type='text' id='toDate' name='toDate[]' value='{$re1["toDate"]}'>
+            <input class='toDate' type='text' id='toDate' name='toDate[]' value='{$re1["toDate"]}' autocomplete='off'>
             <input class='present' type='checkbox' name='present' id='present'>
             <b>Present</b>
         </div>
@@ -162,15 +162,15 @@ foreach($res as $key => $re){
         </div><br>
         <div class="input-group" id="4">
             <label for="date">From Date:</label>
-            <input class='fromDate' type="text" id="fromDate" name="fromDate[]">
+            <input class='fromDate' type="text" id="fromDate" name="fromDate[]" autocomplete="off">
             <label for="date"> To Date:</label>
-            <input class='toDate' type="text" id="toDate" name="toDate[]">
+            <input class='toDate' type="text" id="toDate" name="toDate[]" autocomplete="off">
             <input class="present" type="checkbox" name="present" id="present">
             <b>Present</b>
         </div>
         <input type="text" name="id[]" id="hid" value='12'hidden>
         <button id = "add" class="btn btn-primary1">+</button>
-        <!-- <button id ="delete" class="btn btn-danger">x</button> -->
+        <button id ="delete" class="btn btn-danger" disabled>x</button>
     </div>
 <?php } ?>
 </div>
